@@ -1,2 +1,2 @@
-# students-attendance-management-website
-built in combination of XML + PHP + JAVASCRIPT + HTML + CSS + BOOTSTRAP + MERISE 2 IN CONCEPTION
+# WebSite-Students-absences-management
+I create this web site to manage the students absences, so the trick is to use XML as database of this project

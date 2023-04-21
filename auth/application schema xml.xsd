@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="database">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="roles">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="role">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="users">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="user">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:choice maxOccurs="unbounded">
+                                            <xs:element name="name" type="xs:string" />
+                                            <xs:element name="first-name" type="xs:string" />
+                                            <xs:element name="pseudo" type="xs:string" />
+                                            <xs:element name="password" type="xs:string" />
+                                            <xs:element name="phone" type="xs:unsignedLong" />
+                                            <xs:element name="roleID" type="xs:unsignedByte" />
+                                        </xs:choice>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="permissions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="permission">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="niveaux">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="niveau">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="num" type="xs:unsignedByte" />
+                                        <xs:element minOccurs="0" name="filiereId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:unsignedByte" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="groups">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="group">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="num" type="xs:unsignedByte" />
+                                        <xs:element name="niveauId" type="xs:unsignedByte" />
+                                        <xs:element name="filiereId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="departments">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="department">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="filieres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="filiere">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="departmentId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="students">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="student">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="groupId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="semaine">
+                    <xs:complexType>
+                        <xs:attribute name="num_semaine" type="xs:unsignedByte" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="salle">
+                    <xs:complexType>
+                        <xs:attribute name="nom_salle" type="xs:unsignedByte" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="seances">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="seance">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="groupId" type="xs:string" />
+                                        <xs:element name="matiereId" type="xs:string" />
+                                        <xs:element name="salle" type="xs:string" />
+                                        <xs:element name="duration" type="xs:string" />
+                                        <xs:element name="semaineDebut" type="xs:string" />
+                                        <xs:element name="semaineFin" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                    <xs:attribute name="semestreId" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="userSeances">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="userSeance">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="seanceId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="userId" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="matieres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="matiere">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="moduleId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="semestres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="semestre">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="number" type="xs:unsignedByte" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modules">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="module">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="filiereId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="avoir1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="permissionId" type="xs:string" />
+                            <xs:element name="roleId" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contenir">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="filiereId" type="xs:string" />
+                            <xs:element name="levelId" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="abscences">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="abscence">
+                                <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element maxOccurs="unbounded" name="studentId" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="seanceId" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

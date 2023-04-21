@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
+.outer {
+  position: relative;
+}
+
+.calendar {
+  margin: 0 auto;
+  width: 98%;
+  /* min-width: 500px; */
+  /* background-color: green; */
+
+  /* box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.2) ,0px 3px 7px rgba(0, 0, 0, 0.1); */
+  border-radius: 3px;
+  background-color: wheat;
+  color: #000;
+
+}
+
+.wrap {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* max-width: 1280px; */
+  width: 100%;
+  height: 500px;
+  /* border-radius: 8px; */
+  /* background-color: red; */
+}
+
+header {
+  background: #fff;
+  /* padding: 1rem; */
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border-radius: 8px 8px 0px 0px; */
+
+}
+
+header h1 {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+
+}
+
+tbody {
+  position: relative;
+  /* top: 100px; */
+}
+
+table {
+  /* background: #fff; */
+  width: 100%;
+  /* height: 10px; */
+  border-collapse: collapse;
+  table-layout: fixed;
+
+}
+
+.headcol {
+  width: 60px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0;
+  text-align: center;
+  border: 0;
+  position: relative;
+  top: 0px;
+  /* border-bottom: 1px solid rgb(189, 189, 185); */
+}
+
+thead th {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+}
+
+thead {
+  z-index: 2;
+  background: white;
+  /* border-bottom: 2px solid red; */
+
+}
+
+tr,
+tr td {
+  height: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(odd) td:not(.headcol) {
+  /* border-bottom: 1px solid rgb(189, 189, 185); */
+  /* border-top: 1px solid rgb(189, 189, 185); */
+}
+
+tr td {
+  /* border-right: 1px solid #eee; */
+  /* border-left: 1px solid #eee; */
+  border: 1px solid rgb(189, 189, 185);
+
+  padding: 0;
+  white-space: none;
+  word-wrap: nowrap;
+}
+
+.ti-close {
+  /* display: block; */
+  /* color: red; */
+}
+
+tbody tr td {
+  position: relative;
+  vertical-align: top;
+  height: 100px;
+  padding: 0.25rem 0.25rem 0 0.25rem;
+  width: auto;
+
+}
+
+.d-md-none {
+  display: inline-block;
+}
+
+.secondary {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar-nav {
+  /* background-color: red; */
+  position: relative;
+  margin: 0;
+}
+
+/* Task ==seance */
+.toDoTask {
+  margin: 0;
+  padding: 0;
+  border: 2px solid orange;
+  color: black;
+  font-weight: 500;
+  border-radius: .3rem;
+}
+
+.doingTask {
+  margin: 0;
+  padding: 0;
+  color: rgb(45, 0, 128);
+  font-weight: 500;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.doingTask>.taskRow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 2px double rgb(55, 216, 187);
+  border-radius: .3rem;
+}
+
+.doneTask {
+  margin: 0;
+  padding: 0;
+  border: 2px solid red;
+  color: black;
+  font-weight: 500;
+  border-radius: .3rem;
+}
+
+.taskRow {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.taskColTop {
+  position: relative;
+  /* top: 2px; */
+  /* left: 2px; */
+  margin: auto;
+  margin-top: 5px;
+}
+
+.taskColBottom {
+  position: absolute;
+  bottom: 2px;
+  left: 3px;
+}
+
+#SELECTS {
+  display: flex;
+  justify-content: space-between;
+}
+
+#SELECTS>select,
+.select {
+  font-size: 18px;
+
+  width: 46%;
+  margin: 3px auto;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: .3px 1px 1px rgb(140, 0, 255, .4);
+  border-radius: .3rem;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgb(140, 0, 255, .4);
+
+}
+
+.select {
+  width: 100%;
+}
+
+.showButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+#S1,
+#S2 {
+  color: #000;
+  font-size: 18px;
+  width: 40%;
+  margin: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: .3rem;
+  padding: 10px;
+  outline: none;
+  background-color: rgb(218, 216, 221);
+
+}
+
+#S1,
+#S2 {
+  color: #000;
+  font-size: 18px;
+  width: 40%;
+  margin: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: .3rem;
+  padding: 10px;
+  outline: none;
+  background-color: rgb(216, 221, 219);
+
+}
+
+/* #selectSemaine:focus,
+#selectSemestre:focus {
+  outline: none;
+  border: none;
+
+
+} */
+
+table td {
+  font-size: 100% !important;
+}
+
+table th {
+  font-size: 85% !important;
+}
+
+input[type='checkbox'] {
+  font-size: 10px;
+  /* sets the font size of the checkbox */
+  width: 25px;
+  /* sets the width of the checkbox */
+  height: 25px;
+  /* sets the height of the checkbox */
+  margin-right: 0px;
+}
+
+.im {
+  width: 55px;
+  height: 55px;
+}
+
+.container {
+  /* margin-top: 140px; */
+}

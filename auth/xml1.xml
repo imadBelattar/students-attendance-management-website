@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="application schema xml.xsd"> -->
+<database>
+  <roles>
+    <role id="1">Agent de scolarité</role>
+    <role id="2">Chef département</role>
+    <role id="3">Chef filière</role>
+    <role id="4">Professeur</role>
+    <role id="5">Super
+      Admin</role>
+  </roles>
+  <users>
+    <user id="1">
+      <name>
+        Bakkas</name>
+      <first-name>Jamal</first-name>
+      <pseudo>Bakkas-ests</pseudo>
+      <password>12345</password>
+      <phone>06609483748</phone>
+
+      <roleID>1</roleID>
+    </user>
+    <user id="2">
+      <name>
+        Bayar</name>
+      <first-name>Abdelouahad</first-name>
+      <pseudo>Abdo-ests</pseudo>
+      <password>1234</password>
+      <phone>06609483748</phone>
+      <roleID>4</roleID>
+    </user>
+    <user id="3">
+      <name>
+        Chekry</name>
+      <first-name>Abderrhamane</first-name>
+      <pseudo>chekry-ests</pseudo>
+      <password>chekry2023@</password>
+      <phone>06609483748</phone>
+      <roleID>
+        4</roleID>
+    </user>
+    <user id="4">
+      <name>
+        Mounir</name>
+      <first-name>Ilham</first-name>
+      <pseudo>Mounir-ests</pseudo>
+      <password>1234</password>
+      <phone>06609483748</phone>
+      <roleID>4</roleID>
+    </user>
+    <user id="5">
+      <name>
+        Essalih</name>
+      <first-name>Mohammed</first-name>
+      <pseudo> Essalih-ests</pseudo>
+      <password>12345</password>
+      <phone>06609483748</phone>
+      <roleID>
+        2</roleID>
+    </user>
+    <!-- this is the super admin of the ESTS -->
+    <user id="6">
+      <name>Alami</name>
+      <first-name>Ahmed</first-name>
+      <pseudo>Alami-uca.ests</pseudo>
+      <password>Alami_2023_ESTS</password>
+      <phone>
+        0616782347</phone>
+      <roleID>5</roleID>
+    </user>
+    <user id="7">
+      <name>El hadi</name>
+      <first-name>Marouan</first-name>
+      <pseudo>EL hadi-ests</pseudo>
+      <phone>
+        0625478935</phone>
+      <password>hadi2023@</password>
+      <roleID>1</roleID>
+    </user>
+    <user id="8">
+      <name>Moussaoui</name>
+      <first-name>Karim</first-name>
+      <pseudo>
+        moussaoui-ests</pseudo>
+      <phone>0745125896</phone>
+      <password>moussaoui-ESTS2023</password>
+      <roleID>3</roleID>
+    </user>
+
+
+    <user id="8">
+      <name>
+        ismaili</name>
+      <first-name>taha</first-name>
+      <pseudo>TAHA</pseudo>
+      <password>12345</password>
+      <roleID>5</roleID>
+    </user>
+    <user id="9">
+      <name>ARHIDE</name>
+      <first-name>
+        Khadija</first-name>
+      <pseudo>ARHIDE@ests</pseudo>
+      <phone>0697338276</phone>
+      <password>1234</password>
+      <roleID>4</roleID>
+    </user>
+  </users>
+  <permissions>
+    <permission id="#id_permission">
+      <name>
+        Permission</name>
+    </permission>
+  </permissions>
+  <niveaux>
+    <niveau id="1">
+      <num>1</num>
+    </niveau>
+    <niveau id="2">
+      <num>2</num>
+      <filiereId>GI</filiereId>
+    </niveau>
+  </niveaux>
+  <groups>
+    <group id="GI11">
+      <num>
+        1</num>
+      <niveauId>1</niveauId>
+      <filiereId>GI</filiereId>
+    </group>
+    <group id="GI12">
+      <num>2</num>
+      <niveauId>1</niveauId>
+      <filiereId>GI</filiereId>
+    </group>
+    <group id="GI21">
+      <num>1</num>
+      <niveauId>
+        2</niveauId>
+      <filiereId>GI</filiereId>
+    </group>
+    <group id="GI22">
+      <num>2</num>
+      <niveauId>2</niveauId>
+      <filiereId>GI</filiereId>
+    </group>
+  </groups>
+  <departments>
+    <department id="GI">
+      <name>
+        informatique</name>
+      <chefd>5</chefd>
+    </department>
+    <department id="GIM">
+      <name>indestrial et mantenance</name>
+    </department>
+    <department id="TIMQ">
+      <name>Techniques
+        Instrumentales et Management de Qualité</name>
+    </department>
+    <department id="TM">
+      <name>Techniques de Management</name>
+    </department>
+  </departments>
+  <filieres>
+    <filiere id="GI">
+      <name>Genie
+        informatique</name>
+      <departmentId>
+        GI</departmentId>
+    </filiere>
+    <filiere id="GIM">
+      <name>Genie indestrial et mantenance</name>
+      <departmentId>GIM</departmentId>
+    </filiere>
+    <filiere id="TIMQ">
+      <name>Techniques
+        Instrumentales et Management de Qualité</name>
+      <departmentId>TIMQ</departmentId>
+    </filiere>
+    <filiere id="TM">
+      <name>Techniques de
+        Management</name>
+      <departmentId>TM</departmentId>
+    </filiere>
+
+  </filieres>
+
+  <!-- Students -->
+
+  <students>
+
+    <student id="st1">
+      <name>Eziane
+        Abderrahim</name>
+      <groupId>GI11</groupId>
+    </student>
+
+    <student id="st2">
+      <name>Mustapha Omari</name>
+      <groupId>GI12</groupId>
+    </student>
+
+    <student id="st3">
+      <name>taha
+        ismaili</name>
+      <groupId>GIM11</groupId>
+    </student>
+
+    <student id="st4">
+      <name>imad</name>
+      <groupId>GIM22</groupId>
+    </student>
+
+    <student id="st5">
+      <name>ali</name>
+      <groupId>
+        TIMQ21</groupId>
+    </student>
+
+    <student id="st6">
+      <name>najat</name>
+      <groupId>GI11</groupId>
+    </student>
+
+    <student id="st7">
+      <name>abdessamad</name>
+      <groupId>GI22</groupId>
+    </student>
+
+    <student id="st8">
+      <name>
+        mariam</name>
+      <groupId>GI21</groupId>
+    </student>
+
+    <student id="st9">
+      <name>oussama</name>
+      <groupId>TM22</groupId>
+    </student>
+
+    <student id="st10">
+      <name>souad</name>
+      <groupId>
+        GI12</groupId>
+    </student>
+
+    <student id="st11">
+      <name>brahim</name>
+      <groupId>TIMQ11</groupId>
+    </student>
+
+    <student id="st12">
+      <name>fatima</name>
+      <groupId>TM11</groupId>
+    </student>
+
+    <student id="st13">
+      <name>
+        kawtar</name>
+      <groupId>GIM21</groupId>
+    </student>
+
+    <student id="st14">
+      <name>abdelali</name>
+      <groupId>TM22</groupId>
+    </student>
+
+    <student id="st15">
+      <name>
+        abdellah</name>
+      <groupId>GI12</groupId>
+    </student>
+
+    <student id="st16">
+      <name>youssef</name>
+      <groupId>TIMQ22</groupId>
+    </student>
+
+    <student id="st17">
+      <name>aziza</name>
+      <groupId>
+        GIM21</groupId>
+    </student>
+
+    <student id="st18">
+      <name>hajar</name>
+      <groupId>GI11</groupId>
+    </student>
+
+    <student id="st19">
+      <name>wissal</name>
+      <groupId>GI22</groupId>
+    </student>
+
+    <student id="st20">
+      <name>
+        mohammed</name>
+      <groupId>TM11</groupId>
+    </student>
+
+    <student id="st21">
+      <name>fatimazahra</name>
+      <groupId>TIMQ22</groupId>
+    </student>
+
+    <student id="st22">
+      <name>
+        samir</name>
+      <groupId>GI21</groupId>
+    </student>
+
+    <student id="st23">
+      <name>hassan</name>
+      <groupId>TM22</groupId>
+    </student>
+
+    <student id="st24">
+      <name>zineb</name>
+      <groupId>
+        GI11</groupId>
+    </student>
+
+    <student id="st25">
+      <name>hajar</name>
+      <groupId>GI21</groupId>
+    </student>
+
+    <student id="st26">
+      <name>nourddine</name>
+      <groupId>TIMQ11</groupId>
+    </student>
+
+    <student id="st27">
+      <name>
+        youssef</name>
+      <groupId>GI12</groupId>
+    </student>
+
+    <student id="st28">
+      <name>abderrahim</name>
+      <groupId>GIM21</groupId>
+    </student>
+
+    <student id="st29">
+      <name>
+        sanae</name>
+      <groupId>GI21</groupId>
+    </student>
+
+    <student id="st30">
+      <name>mounia</name>
+      <groupId>TM22</groupId>
+    </student>
+
+    <student id="st31">
+      <name>mohamed</name>
+      <groupId>
+        GI12</groupId>
+    </student>
+
+    <student id="st32">
+      <name>hamza</name>
+      <groupId>TM11</groupId>
+    </student>
+  </students>
+  <semaine num_semaine="1" />
+  <semaine num_semaine="2" />
+  <semaine num_semaine="3" />
+  <semaine num_semaine="4" />
+  <semaine num_semaine="5" />
+  <semaine num_semaine="6" />
+  <semaine num_semaine="7" />
+  <semaine num_semaine="8" />
+  <semaine num_semaine="9" />
+  <semaine num_semaine="10" />
+  <semaine num_semaine="11" />
+  <semaine num_semaine="12" />
+
+  <salle nom_salle="1" />
+  <salle nom_salle="2" />
+  <salle nom_salle="3" />
+  <salle nom_salle="4" />
+  <salle nom_salle="5" />
+  <salle nom_salle="6" />
+  <salle nom_salle="7" />
+  <salle nom_salle="8" />
+  <salle nom_salle="9" />
+  <salle nom_salle="10" />
+  <salle nom_salle="11" />
+  <salle nom_salle="12" />
+  <salle nom_salle="12" />
+  <salle nom_salle="12" />
+  <salle nom_salle="13" />
+  <salle nom_salle="14" />
+  <salle nom_salle="15" />
+  <salle nom_salle="16" />
+  <salle nom_salle="17" />
+  <salle nom_salle="18" />
+  <salle nom_salle="19" />
+  <salle nom_salle="20" />
+
+  <seances>
+
+
+    <seance id="H1D2_Abdo-ests" semestreId="S2">
+      <groupId>GI11</groupId>
+      <matiereId>Entropot de donner</matiereId>
+      <salle>salle 2</salle>
+      <duration>1</duration>
+      <semaineDebut>S4</semaineDebut>
+      <semaineFin>S4</semaineFin>
+    </seance>
+    <seance id="H1D5_Abdo-ests" semestreId="S1">
+      <groupId>GI11</groupId>
+      <matiereId>Entropot de donner</matiereId>
+      <salle>salle 2</salle>
+      <duration>1</duration>
+      <semaineDebut>S4</semaineDebut>
+      <semaineFin>S4</semaineFin>
+    </seance>
+    <seance id="H1D6_Mounir-ests" semestreId="S1">
+      <groupId>GI11</groupId>
+      <matiereId>Data mining</matiereId>
+      <salle>salle 2</salle>
+      <duration>1</duration>
+      <semaineDebut>S4</semaineDebut>
+      <semaineFin>S8</semaineFin>
+    </seance>
+  </seances>
+
+  <userSeances>
+
+    <userSeance userId="Abdo-ests">
+      <seanceId>H1D3_Abdo-ests</seanceId>
+      <seanceId>H1D4_Abdo-ests</seanceId>
+      <seanceId>H1D2_Abdo-ests</seanceId>
+      <seanceId>H1D5_Abdo-ests</seanceId>
+    </userSeance>
+    <userSeance userId="Mounir-ests">
+      <seanceId>H1D6_Mounir-ests</seanceId>
+    </userSeance>
+  </userSeances>
+  <matieres>
+    <matiere id="XML_el1">
+      <name>
+        XML</name>
+      <moduleId>web</moduleId>
+    </matiere>
+    <matiere id="merise">
+      <name>
+        Merise</name>
+      <moduleId>web</moduleId>
+    </matiere>
+    <matiere id="entropot">
+      <name>Entropot de donner</name>
+      <moduleId>datawarehouse</moduleId>
+    </matiere>
+    <matiere id="AI">
+      <name>Data
+        mining</name>
+      <moduleId>datawarehouse</moduleId>
+    </matiere>
+    <matiere id="GestionDeProjet">
+      <name>Gestion de projet</name>
+      <moduleId>Compta</moduleId>
+    </matiere>
+  </matieres>
+  <semestres>
+
+    <semestre id="s1">
+      <number>
+        1</number>
+    </semestre>
+  </semestres>
+
+  <modules>
+    <module id="web">
+      <name>Technologie
+        web</name>
+      <filiereId>GI</filiereId>
+    </module>
+    <module id="datawarehouse">
+      <name>data
+        warehouse</name>
+      <filiereId>GI</filiereId>
+    </module>
+    <module id="Compta">
+      <name>Comptabilite</name>
+      <filiereId>TIMQ</filiereId>
+    </module>
+  </modules>
+  <avoir1>
+    <permissionId>
+      #id_permission_Permissions</permissionId>
+    <roleId>#id_role_Roles</roleId>
+  </avoir1>
+  <contenir>
+    <filiereId>
+      #id_filiere_Filieres</filiereId>
+    <levelId>#id_Niveau_Niveaux</levelId>
+  </contenir>
+
+
+  <abscences>
+
+
+    <abscence seanceId="H1D3_H2D3_Abdo-estsAbdo-ests3">
+
+
+    </abscence>
+    <abscence seanceId="H3D6_H4D6_Abdo-estsAbdo-ests11">
+      <studentId>st7</studentId>
+      <studentId>st19</studentId>
+    </abscence>
+    <abscence seanceId="H1D1_H2D1_Abdo-estsAbdo-ests5">
+      <studentId>st7</studentId>
+      <studentId>st19</studentId>
+    </abscence>
+    <abscence seanceId="H1D1_H2D1_Abdo-estsS2 6">
+
+
+    </abscence>
+    <abscence seanceId="H1D1_H2D1_ARHIDE@estsS1 9">
+      <studentId>st1</studentId>
+    </abscence>
+    <abscence seanceId="H1D4_H2D4_ARHIDE@estsS1 4">
+      <studentId>st19</studentId>
+    </abscence>
+    <abscence seanceId="H1D6_Mounir-estsS1 5">
+
+
+    </abscence>
+  </abscences>
+  <!-- Levels -->
+
+</database>
